@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans">
+
+  <bean id="processEngineConfiguration"
+    class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+    <property name="databaseType" value="h2"/>
+    <property name="databaseSchemaUpdate" value="true"/>
+    <property name="jobExecutorActivate" value="false"/>
+    <property name="history" value="full"/>
+  </bean>
+</beans>
