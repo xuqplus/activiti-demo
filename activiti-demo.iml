@@ -46,6 +46,7 @@
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.6" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.6" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.6" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-all:2.5.0-beta-1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.8.0-alpha2" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:1.4.196" level="project" />

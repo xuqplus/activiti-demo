@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/test" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1509938266623" name="" targetNamespace="http://www.activiti.org/test" typeLanguage="http://www.w3.org/2001/XMLSchema">
+  <process id="sayByeToLeave" isClosed="false" isExecutable="true" name="sayByeToLeave" processType="None">
+    <startEvent id="startEvent1" name="StartEvent"/>
+    <userTask activiti:exclusive="true" id="userTask1" name="上级审批">
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>
+            deptLeader
+          </formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <scriptTask id="outputAuditResult" name="输出审批结果" scriptFormat="groovy">
+      <script>
+        <![CDATA[out:println "--xuqplus-- applyUser:" + applyUser + ", days:" + days + ", approval:" + approved;]]>
+      </script>
+    </scriptTask>
+    <endEvent id="endEvent1" name="EndEvent"/>
+    <sequenceFlow id="flow1" sourceRef="startEvent1" targetRef="userTask1"/>
+    <sequenceFlow id="flow2" sourceRef="userTask1" targetRef="outputAuditResult"/>
+    <sequenceFlow id="flow3" sourceRef="outputAuditResult" targetRef="endEvent1"/>
+  </process>
+</definitions>

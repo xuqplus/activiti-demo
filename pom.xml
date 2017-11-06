@@ -15,6 +15,12 @@
       <artifactId>activiti-engine</artifactId>
       <version>5.22.0</version>
     </dependency>
+    <!--groovy-->
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>2.5.0-beta-1</version>
+    </dependency>
 
     <!--slf4j-->
     <dependency>
