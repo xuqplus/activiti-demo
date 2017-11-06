@@ -81,6 +81,7 @@ public class LeaveProcessTest {
     //完成任务
     variables = new HashMap(8);
     variables.put("approved", true);
+    taskService.claim(taskOfDeptLeader.getId(), "lead1");//签收任务
     taskService.complete(taskOfDeptLeader.getId(), variables);
 
     //查询任务
